@@ -1,18 +1,16 @@
-document.addEventListener("turbolinks:load", function () {
-  var subject = document.getElementById("subject");
-  var test = document.getElementById("test");
-
-  subject.addEventListener("change", function () {
+$(document).on("turbolinks:load", function(){
+  var subject = $("#subject");
+  var test = $("#test_test");
+  $(subject).on("change", function(){
     $.ajax({
-      type: 'get',
-      url: "/getListTest?subject_id=" + subject.value,
-      dataType: 'json',
-      success: function(data) {
-        $('#test_test')
-          .find('option')
-          .remove();
+      type: "get",
+      url: "/getListTest?subject_id=" + $("#subject").val(),
+      dataType: "json",
+      success: function(data){
+          test.find("option")
+          .remove()
         for (var i = 0; i < data.length; i++) {
-          $('#test_test').append(
+          $("#test_test").append(
             $("<option 'value'= "+data[i].id+">"+data[i].name+"</option>"));
         }
       }

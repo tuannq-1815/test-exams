@@ -6,8 +6,7 @@ class TestsController < ApplicationController
   end
 
   def loadTypeTest
-    subject_id = params[:subject_id]
-    listTest = Test.bySubjectId subject_id
+    listTest = Test.by_subject_id params[:subject_id]
     respond_to do |format|
       format.json { render :json => listTest }
     end
