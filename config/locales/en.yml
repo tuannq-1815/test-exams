@@ -1,4 +1,15 @@
 en:
+  tests:
+    form:
+      test: "Test"
+    index:
+      test_detail: "Test detail"
+      created_date: "Created Date"
+      subject: "Subject"
+      status: "Status"
+      duration: "Duration"
+      question_number: "Question number"
+      score: "Score"
   hello: "Hello world"
   layouts:
     application:
@@ -21,3 +32,5 @@ en:
       welcome_to: "Welcome to the Test Exam"
       this_is: "This is the home page for the test exam website. Please sign up to do test exam."
       sign_up: "Sign up now!"
+    test:
+      test: "Test"

@@ -94,3 +94,24 @@ footer {
     }
   }
 }
+
+/* select form */
+.select-form{
+}
+
+.custom-button{
+  height: 34px;
+  line-height: 25px;
+}
+
+.button-cr{
+  padding-top: 25px;
+}
+
+/* tables custom */
+.table{
+  margin-bottom: 250px;
+  thead{
+    background-color: $gray-darker;
+  }
+}

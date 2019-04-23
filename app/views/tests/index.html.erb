@@ -1,0 +1,35 @@
+<% provide :title, t(".test") %>
+<h1><%= t ".test" %></h1>
+<%= form_for :test do |form| %>
+  <div class="row">
+    <div class="col-sm-3">
+      <%= label_tag :subject %>
+      <%= select_tag :subject, options_for_select(Subject.pluck :id ),
+        class: "form-control select-form" %>
+    </div>
+    <div class="col-sm-3">
+      <%= form.label :test %>
+      <%= form.select :test, options_for_select([]), {},
+        class: "form-control select-form" %>
+    </div>
+    <div class="button-cr">
+    <%= link_to t(".Create Exam"), exam_path, class: "btn btn-sm btn-primary col-sm-1 custom-button" %>
+    </div>
+  </div>
+  <hr>
+  <h4><%= t ".test_detail"%></h4>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th style="width:20%"><%= t ".created_date"%></th>
+        <th style="width:20%"><%= t ".subject"%></th>
+        <th><%= t ".status"%></th>
+        <th><%= t ".duration"%>Duration</th>
+        <th><%= t ".question_number"%></th>
+        <th><%= t ".score"%></th>
+      </tr>
+    </thead>
+      <tr>
+      </tr>
+  </table>
+<% end %>
