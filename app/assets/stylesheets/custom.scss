@@ -2,8 +2,6 @@
 @import 'bootstrap';
 @import 'color.scss';
 /* mixins, variables, etc. */
-
-
 /* universal */
 
 body {
@@ -94,4 +92,17 @@ footer {
       margin-left: 15px;
     }
   }
+}
+
+/* select form */
+.select-form{
+}
+
+.custom-button{
+  height: 34px;
+  line-height: 25px;
+}
+
+.button-cr{
+  padding-top: 25px;
 }

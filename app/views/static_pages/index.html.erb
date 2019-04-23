@@ -1,0 +1,31 @@
+<%= form_for @subject do |f| %>
+<% provide :title, t(".test") %>
+<h1><%= t ".test" %></h1>
+<div class="row">
+  <div class="col-sm-3">
+    <select id="subject" name="post[subject_id]" class="form-control select-form">
+    <% Subject.all.each do |subject| %>
+        <option value="<%= subject.id %>"><%= subject.name %></option>
+    <% end %>
+    </select>
+  </div>
+  <div class="col-sm-3">
+      <%= f.select :test_id, options_for_select(@list_tests),
+          { }, { class: "form-control select-form" } %>
+  </div>
+  <%= link_to t(".Create Exam"), "#", class: "btn btn-sm btn-primary col-sm-1 custom-button" %>
+</div>
+<hr>
+<h4>List Of Exams </h4>
+<table class="table table-striped">
+  <tr>
+    <th style="width:20%">Created Date</th>
+    <th>Subject</th>
+    <th>Status</th>
+    <th>Duration</th>
+    <th>Question number</th>
+    <th>Score</th>
+    <th></th>
+  </tr>
+</table>
+<% end %>
