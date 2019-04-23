@@ -1,5 +1,23 @@
 en:
   hello: "Hello world"
-  layout:
+  layouts:
     application:
       testExams: "TestExams"
+      project_1: "Project 1"
+    footer:
+      sun_asterisk: "Sun* Inc."
+      project_1: "Project 1-Test exam website"
+      about_us: "About us"
+    header:
+      test_exam: "test exam"
+      home: "Home"
+      help: "Help"
+      log_in: "Log in"
+  static_pages:
+    help:
+      help: "Help"
+      test_exam_website: "Test Exam Website"
+    home:
+      welcome_to: "Welcome to the Test Exam"
+      this_is: "This is the home page for the test exam website. Please sign up to do test exam."
+      sign_up: "Sign up now!"
