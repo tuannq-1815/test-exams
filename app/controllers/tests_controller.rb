@@ -1,4 +1,6 @@
 class TestsController < ApplicationController
+  before_action :load_test, only: [:do_test]
+
   def index
    @tests = Test.all
   end
@@ -11,15 +13,19 @@ class TestsController < ApplicationController
     end
   end
 
-  def new
+  def create
 
+  end
+
+  def new
+    @test = Test.new
   end
 
   private
 
   def load_test
     @test = Test.find_by id: params[:id]
-    return if (@test)
+    return if @test
     flash[:danger] = t "not_found"
     render :index
   end

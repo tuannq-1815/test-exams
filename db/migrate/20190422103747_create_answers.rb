@@ -6,5 +6,6 @@ class CreateAnswers < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
+    add_column :answers, :content, :string
   end
 end

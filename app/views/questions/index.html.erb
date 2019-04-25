@@ -1,0 +1,13 @@
+<h1>iuiu</h1>
+<hr>
+<ol>
+  <% @questions.each do |question| %>
+    <li><b><%= question.question %></b></li>
+    <div class="radio">
+      <% question.answers.each do |answer| %>
+        <%= answer.content %>
+        <label><input type="radio" name="optradio" checked>Option 1</label>
+      <% end %>
+    </div>
+  <% end %>
+</ol>
