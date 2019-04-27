@@ -40,3 +40,12 @@ en:
       sign_up: "Sign up"
     create:
       please_check: "Please check your email to activate your account."
+  sessions:
+    new:
+      log_in: "Login"
+      forgot_password: "Forgot password"
+      remember_me: "Remember me"
+      new_user: "New user?"
+      sign_up_now: "Sign up now!"
+    create:
+      invalid_email: "Invalid email/password combination"
