@@ -49,3 +49,22 @@ en:
       sign_up_now: "Sign up now!"
     create:
       invalid_email: "Invalid email/password combination"
+  admin:
+    subjects:
+      new:
+        create_subject: "Create subject"
+        add_new_subject: "Add new subject"
+      create:
+        created: "Subject created!"
+        create_unsuccess: "Create Unsuccesfully!"
+      index:
+        search_by: "Search by name or description..."
+        search: "Search"
+        confirm: "Confim"
+      update:
+        subject_updated: "Subject updated!"
+      edit:
+        save_change: "Save change"
+      destroy:
+        subject_deleted: "Subject deleted"
+        subject_failed: "Subject failed"

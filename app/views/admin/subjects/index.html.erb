@@ -1,0 +1,46 @@
+<% provide(:title, t(".subjects")) %>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="table-toolbar">
+          <%= form_tag "#", class: "search", method: :get do %>
+            <%= text_field_tag :term, params[:term], placeholder: t(".search_by")%>
+            <%= submit_tag t(".search"), class: "btn btn-primary" %>
+          <% end %>
+        </div>
+        <%= link_to t(".create"), new_admin_subject_path, class: "btn btn-success" %>
+        <table width="100%" class="table table-bordered table-hover" id="datatable">
+          <thead>
+            <tr>
+              <th><%= t ".No" %></th>
+              <th><%= t ".subject_name" %></th>
+              <th><%= t ".author_name" %></th>
+              <th><%= t ".create_at" %></th>
+              <th colspan="2"><%= t ".action" %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @subjects.each_with_index do |subject,index| %>
+            <tr>
+              <td><%= create_index params[:page], index, 5 %></td>
+              <td><%= subject.name %></td>
+              <td><%= subject.author_name %></td>
+              <td><%= subject.created_at %></td>
+              <td>
+                <%= link_to t(".edit"), edit_admin_subject_path(subject.id),
+                  class: "btn btn-warning" %>
+              </td>
+              <td>
+                <%= link_to t(".delete"), admin_subject_path(subject.id),
+                method: :delete, data: {confirm: t(".confirm")}, class: "btn btn-danger" %>
+              </td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <%= paginate @subjects %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "/exam", to: "tests#new"
   get "/help", to: "static_pages#help"
   get "/getListTest", to: "tests#loadTypeTest"
+  get "/admin", to: "admin/base#home"
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
@@ -15,4 +16,7 @@ Rails.application.routes.draw do
   resources :users
   resources :account_activations, only: %i(edit)
   resources :password_resets, only: %i(new create edit update)
+  namespace :admin do
+    resources :subjects
+  end
 end
