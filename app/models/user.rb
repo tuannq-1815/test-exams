@@ -27,6 +27,14 @@ class User < ApplicationRecord
     def new_token
       SecureRandom.urlsafe_base64
     end
+
+    def search term
+      if term
+        where("name LIKE ? OR address LIKE ?", "%#{term}%", "%#{term}%")
+      else
+        all
+      end
+    end
   end
 
   def remember

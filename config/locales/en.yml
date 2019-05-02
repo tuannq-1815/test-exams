@@ -97,3 +97,18 @@ en:
         test_deleted: "Test deleted"
       edit:
         create_test: "Create test"
+    users:
+      index:
+        search: "Search"
+        number: "No"
+        avatar: "Avatar"
+        user_name: "User Name"
+        user_email: "User email"
+        created_at: "Create at"
+        action: "Action"
+        delete: "Delete"
+        confirm: "Confirm"
+        list_users: "List users"
+        users: "Users"
+      destroy:
+        user_delete_succeed: "User delete succeed"
