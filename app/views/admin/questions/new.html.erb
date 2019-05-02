@@ -1,0 +1,27 @@
+<% provide(:title, t(".add_new_question")) %>
+<% provide(:button_text, t(".create_question")) %>
+<h1><%= t ".add_new_subject" %></h1>
+
+<div class="row">
+  <div class="col-md-6">
+    <%= form_for [:admin, @question] do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+
+      <%= label_tag :subject %>
+      <%= select_tag :subject, options_for_select(Subject.pluck :name ),
+        class: "form-control select-form" %>
+
+      <%= label_tag :test %>
+      <%= select_tag :test, options_for_select(Test.pluck :name ),
+        class: "form-control select-form" %>
+
+      <%= f.label :question %>
+      <%= f.text_area :question, class: "form-control" %>
+
+      <%= f.label :option_1 %>
+      <%= f.text_field :question, class: "form-control" %>
+
+      <%= f.submit t(".create_question"), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

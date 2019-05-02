@@ -53,6 +53,17 @@ en:
     create:
       invalid_email: "Invalid email/password combination"
   admin:
+    header:
+      title: "Title"
+      home: "Home"
+      log_out: "Log out"
+    sidebar:
+      dashboard: "Dashboard"
+      users: "Users"
+      subjects: "Subjects"
+      tests: "Tests"
+    footer:
+      title: "Title"
     subjects:
       new:
         create_subject: "Create subject"
@@ -112,3 +123,21 @@ en:
         users: "Users"
       destroy:
         user_delete_succeed: "User delete succeed"
+    questions:
+      index:
+        search: "Search"
+        questions: "Questions"
+        questions_list: "List questions"
+        search_by: "Search by"
+        num: "No"
+        question: "Question"
+        created_at: "Create at"
+        confirm: "Confirm"
+      update:
+        question_updated: "Question updated!"
+      edit:
+        save_change: "Save change"
+        edit_question: "Edit question"
+      new:
+        create_question: "Create question"
+        add_new_question: "Add new question"

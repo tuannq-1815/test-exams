@@ -1,0 +1,46 @@
+<% provide(:title, t(".questions")) %>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h2>
+          <b><%= t".questions_list"%></b>
+        </h2>
+        <div class="table-toolbar">
+          <%= form_tag "#", class: "search", method: :get do %>
+            <%= text_field_tag :term, params[:term], placeholder: t(".search_by")%>
+            <%= submit_tag t(".search"), class: "btn btn-primary" %>
+          <% end %>
+        </div>
+        <table width="100%" class="table table-bordered table-hover" id="datatable">
+          <thead>
+            <tr>
+              <th><%= t ".num" %></th>
+              <th width="60%"><%= t ".question" %></th>
+              <th><%= t ".created_at" %></th>
+              <th colspan="2"><%= t ".action" %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @questions.each_with_index do |question,index| %>
+            <tr>
+              <td><%= create_index params[:page], index, 10 %></td>
+              <td><%= question.question %></td>
+              <td><%= question.created_at %></td>
+              <td>
+                <%= link_to t(".edit"), edit_admin_question_path(question.id),
+                  class: "btn btn-warning" %>
+              </td>
+              <td>
+                <%= link_to t(".delete"), admin_question_path(question.id),
+                method: :delete, data: {confirm: t(".confirm")}, class: "btn btn-danger" %>
+              </td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <%= paginate @questions %>
+      </div>
+    </div>
+  </div>
+</div>
