@@ -9,7 +9,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by params[:id]
   end
 
   def create
@@ -45,7 +44,7 @@ class UsersController < ApplicationController
   private
 
   def find_user
-    @user = User.find params[:id]
+    @user = User.find_by id: params[:id]
     return if @user
     flash[:error] = t ".not_found"
     redirect_to root_path

@@ -1,6 +1,6 @@
 <% provide :title, t(".test") %>
 <h1><%= t ".test" %></h1>
-<%= form_for :test do |form| %>
+<%= form_for :test, url: new_score_path, method: :get do |form| %>
   <div class="row">
     <div class="col-sm-3">
       <%= label_tag :subject %>
@@ -12,8 +12,8 @@
       <%= form.select :test, options_for_select([]), {},
         class: "form-control select-form" %>
     </div>
-    <div class="button-cr">
-    <%= link_to t(".Create Exam"), test_path, class: "btn btn-sm btn-primary col-sm-1 custom-button" %>
+    <div class="button-cr col-sm-2">
+     <%= form.submit "Create Exam", class: "btn btn-primary" %>
     </div>
   </div>
   <hr>

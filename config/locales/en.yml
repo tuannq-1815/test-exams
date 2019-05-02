@@ -10,6 +10,7 @@ en:
       duration: "Duration"
       question_number: "Question number"
       score: "Score"
+      test: "Tests"
   hello: "Hello world"
   layouts:
     application:
@@ -43,6 +44,10 @@ en:
       sign_up: "Sign up"
     create:
       please_check: "Please check your email to activate your account."
+    edit:
+      save_changes: "Save changes"
+    update:
+      profile_updated: "Profile updated!"
   sessions:
     new:
       log_in: "Login"
@@ -102,6 +107,7 @@ en:
         create_test: "Create test"
       create:
         create_unsuccess: "Create unsuccessful!"
+        created: "Test created!"
       update:
         test_updated: "Test updated"
       destroy:
@@ -141,3 +147,7 @@ en:
       new:
         create_question: "Create question"
         add_new_question: "Add new question"
+  scores:
+    index:
+      test: "Test"
+  not_found: "Not found"

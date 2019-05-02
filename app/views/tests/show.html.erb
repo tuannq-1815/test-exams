@@ -1,0 +1,18 @@
+<%= form_for @test do |f| %>
+  <h1><%= @test.name %></h1>
+  <ol>
+    <% @test.questions.each do |q| %>
+      <%= f.fields_for :questions, q do |f_question| %>
+          <li><%= q.question %></li>
+          <% q.answers.each do |a| %>
+            <div>
+              <%= f_question.radio_button :answer_id, a.id,  checked: false %>
+              <%= a.content %>
+            </div>
+          <% end %>
+      <% end %>
+    <% end %>
+  </ol>
+  <%= f.submit "Submit", method: :update, class:"btn btn-primary",
+    data: {confirm: "Are you sure"} %>
+<% end %>

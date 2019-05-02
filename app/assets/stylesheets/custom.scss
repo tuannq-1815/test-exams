@@ -197,3 +197,20 @@ input {
   width: auto;
   margin-left: 0;
 }
+
+.do_test{
+  li{
+    font-weight: bold;
+  }
+}
+
+.tick-qs-a{
+  position: relative;
+  right: 42px;
+}
+
+.tick-qs-b{
+  position: absolute;
+  left: -75px;
+  font-weight: normal;
+}

@@ -1,0 +1,26 @@
+<%= form_for @test do |f| %>
+  <h1><%= @test.name %></h1>
+  <ol>
+    <% @test.questions.each do |q| %>
+      <%= f.fields_for :questions, q do |f_question| %>
+        <div class="row">
+          <div class="do_test col-sm-12">
+            <li><%= q.question %></li>
+          </div>
+          <% q.answers.each do |a| %>
+              <div class="col-sm-12">
+                <div class="col-sm-1">
+                  <%= f_question.radio_button :answer_id, a.id, checked: false, class: "tick-qs-a"%>
+                </div>
+                <div class="col-sm-11 ">
+                  <%= f.label a.content, class: "tick-qs-b" %>
+                </div>
+              </div>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+  </ol>
+  <%= f.submit "Submit", method: :post, class:"btn btn-primary",
+    data: {confirm: "Are you sure"} %>
+<% end %>

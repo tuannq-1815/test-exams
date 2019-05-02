@@ -1,17 +1,16 @@
 <% provide(:title, t(".add_new_test")) %>
 <% provide(:button_text, t(".create_test")) %>
 <h1><%= t ".add_new_test" %></h1>
-
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for [:admin, @test] do |f| %>
       <%= render "shared/error_messages", object: f.object %>
-
-      <%= f.label :subject %>
-       <%= select_tag :subject, options_for_select(Subject.pluck :name ),
-        class: "form-control select-form" %>
+      <%= f.label :subject %><br>
+      <%= f.collection_select :subject, Subject.all, :id,:name, prompt: true, class: "form-control" %> <br>
+      <%= f.label :subject_id,"Subject ID" %>
+      <%= f.text_field :subject_id, class: "form-control" %>
       <%= f.label :time_limit %>
-      <%= f.text_area :time_limit, class: "form-control" %>
+      <%= f.text_field :time_limit, class: "form-control" %>
       <%= f.label :name %>
       <%= f.text_area :name, class: "form-control" %>
       <%= f.submit t(".create_test"), class: "btn btn-primary" %>
