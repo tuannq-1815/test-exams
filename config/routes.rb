@@ -18,5 +18,6 @@ Rails.application.routes.draw do
   resources :password_resets, only: %i(new create edit update)
   namespace :admin do
     resources :subjects
+    resources :tests
   end
 end

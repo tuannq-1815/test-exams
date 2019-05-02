@@ -24,6 +24,9 @@ en:
       home: "Home"
       help: "Help"
       log_in: "Log in"
+    admin:
+      index:
+        project_1: "Project 1"
   static_pages:
     help:
       help: "Help"
@@ -61,6 +64,7 @@ en:
         search_by: "Search by name or description..."
         search: "Search"
         confirm: "Confim"
+        subject_list: "Subject list"
       update:
         subject_updated: "Subject updated!"
       edit:
@@ -68,3 +72,28 @@ en:
       destroy:
         subject_deleted: "Subject deleted"
         subject_failed: "Subject failed"
+    tests:
+      index:
+        tests: "Tests"
+        list_test: "Test list"
+        number: "No"
+        test_name: "Test name"
+        time_limit: "Time limit"
+        subject_id: "Subject ID"
+        created_at: "Create at"
+        action: "Action"
+        edit: "Edit"
+        delete: "Delete"
+        create: "Create"
+        confirm: "Confirm"
+      new:
+        add_new_test: "Add new test"
+        create_test: "Create test"
+      create:
+        create_unsuccess: "Create unsuccessful!"
+      update:
+        test_updated: "Test updated"
+      destroy:
+        test_deleted: "Test deleted"
+      edit:
+        create_test: "Create test"
